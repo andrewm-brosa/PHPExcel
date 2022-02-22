@@ -3564,8 +3564,8 @@ class PHPExcel_Calculation {
 		}
 
 		//	Simple validate the two operands if they are string values
-		if (is_string($operand1) && $operand1 > '' && $operand1{0} == '"') { $operand1 = self::_unwrapResult($operand1); }
-		if (is_string($operand2) && $operand2 > '' && $operand2{0} == '"') { $operand2 = self::_unwrapResult($operand2); }
+		if (is_string($operand1) && $operand1 > '' && $operand1[0] == '"') { $operand1 = self::_unwrapResult($operand1); }
+		if (is_string($operand2) && $operand2 > '' && $operand2[0] == '"') { $operand2 = self::_unwrapResult($operand2); }
 
 		// Use case insensitive comparaison if not OpenOffice mode
 		if (PHPExcel_Calculation_Functions::getCompatibilityMode() != PHPExcel_Calculation_Functions::COMPATIBILITY_OPENOFFICE)
